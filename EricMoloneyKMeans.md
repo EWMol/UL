@@ -1,1 +1,7 @@
-This is a follow on of my previous paper where I introduced Python and different methods to download stock data.
+This post is a follow on of my previous paper where I introduced Python and different methods to download stock data. With the downloaded data we are going to calculate three features, historic returns, volatility and correlation of the stocks in the portfolio to the SPY, an ETF of the S&P500 stock index, which is a measure of the US stock market. I will then proceed to use the K-Means clustering algorithm to divide the stocks into distinct groups based upon said features. Dividing assets into groups with similiar characteristics can help construct diversified, long/short or mean reverting portfolios to name a few.
+
+
+![image](https://user-images.githubusercontent.com/35773761/39299112-e61fb0d6-493f-11e8-8f02-76139b2d401e.png)
+
+K-means clustering is a type of unsupervised learning, which is used when you have unlabeled data (i.e., data without defined categories or groups). The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K. The algorithm works iteratively to assign each data point to one of K groups based on the features that are provided. Data points are clustered based on feature similarity. Rather than defining groups before looking at the data, clustering allows you to find and analyze the groups that have formed organically. The "Choosing K" section below describes how the number of groups can be determined.  Each centroid of a cluster is a collection of feature values which define the resulting groups. Examining the centroid feature weights can be used to qualitatively interpret what kind of group each cluster represents. 
+
