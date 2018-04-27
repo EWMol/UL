@@ -140,5 +140,21 @@ The images below show an example of the code in jupyter with its output and exce
 
 ![image](https://user-images.githubusercontent.com/35773761/39294308-5428b26a-4933-11e8-95d5-0037b460590f.png)
 
+Now that we have the data we first need to check for any outliers or missing values. To do this I first check for any missing values,
+plot a histogram of returns for each asset and finally plot the assets prices. Luckily there are no missing values or outliers in this 
+dataset (depending on the asset daily returns greater than mod(5) need to be inspected, this may be due to a volatile market, earnings announcement etc.). We are now ready to conduct  our analysis!!
 
 
+```
+df.isnull().values.any()
+df.pct_change().hist(bins=50,figsize=(10,10))
+plt.show()
+
+plt.figure(figsize=(10,5))
+df.plot()
+plt.show()
+```
+
+![image](https://user-images.githubusercontent.com/35773761/39352552-fe1b9c78-49fc-11e8-9b73-d682681626d7.png)
+
+![image](https://user-images.githubusercontent.com/35773761/39352572-0ece9db8-49fd-11e8-9f5e-9615c0fdc756.png)
